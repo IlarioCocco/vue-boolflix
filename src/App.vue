@@ -23,12 +23,12 @@ export default {
     axios.get('https://api.themoviedb.org/3/search/movie', {
        params: {
          api_key: '93138e86c1b2f8ca76e512cc0d72943b',
-         query:   'Ritorno al futuro',
-         language:'it-IT',
+         query:   'predator',
+         language:'en-US',
       }
     })
     .then(function (response) {
-      console.log(response.data);
+      console.log(response.data.results);
     });
   }
 }
