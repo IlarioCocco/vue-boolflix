@@ -1,7 +1,8 @@
 <template>
   <div class="header">
+      <!-- searchMovies è methods,  -->
       <input type="text" v-model="searchMovies" placeholder="search Movies">
-      <button @click="$emit('search', searchMovies)">Search</button>
+      <button @click="$emit('listen', searchMovies)">Search</button>
   </div>
 </template>
 
