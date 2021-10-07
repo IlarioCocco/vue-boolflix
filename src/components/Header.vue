@@ -1,7 +1,7 @@
 <template>
   <div class="header">
-      <input type="cerca" placeholder="search Movies">
-      <button>Search</button>
+      <input type="cerca" v-model="searchMovies" placeholder="search Movies">
+      <button @click="$emit('search', serchMovies)">Search</button>
   </div>
 </template>
 
@@ -12,6 +12,11 @@
 
 export default {
   name: 'Header',
+  data() {
+      return {
+        searchMovies: ""
+      }
+  }
  
 }
 </script>

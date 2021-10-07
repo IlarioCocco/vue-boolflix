@@ -10,9 +10,9 @@
 
 <script>
 // importazione dei componenti
-//+
-//registrazione dei componenti
 import Card from './Card.vue';
+
+// registrazione dei componenti
 export default {
   name: 'Movies',
   components: {
