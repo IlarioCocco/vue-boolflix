@@ -1,17 +1,15 @@
 <template>
-  <div class="hello">
+  <div class="header">
       <input type="cerca" placeholder="search Movies">
-      <button>clcik</button>
+      <button>Search</button>
   </div>
 </template>
 
 
 
 
-
-
-
 <script>
+
 export default {
   name: 'Header',
  

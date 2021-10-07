@@ -1,18 +1,23 @@
 <template>
-  <div class="hello">
+  <div class="containerMovies">
+<!-- utilizzo dei componeni -->
+      <Card/>
    
   </div>
 </template>
 
 
 
-
-
-
-
 <script>
+// importazione dei componenti
+//+
+//registrazione dei componenti
+import Card from './Card.vue';
 export default {
   name: 'Movies',
+  components: {
+      Card
+  }
  
 }
 </script>
