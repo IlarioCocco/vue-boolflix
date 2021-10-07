@@ -10,7 +10,7 @@
 <script>
 import Header from './components/Header.vue';
 import Movies from './components/Movies.vue';
-// import axios from '.axios'
+import axios from '.axios';
 
 export default {
   name: 'App',
@@ -18,6 +18,18 @@ export default {
     Header,
     Movies
   },
+
+  created(){
+    axios.get('https://api.themoviedb.org/3/search/movie'), {
+       params: {
+         api_key: 'e99307154c6dfb0b4750f6603256716d',
+         query: 'ritorno+al+futuro',
+         language: 'it-IT',
+      }
+    }
+     
+
+  }
 
 }
 </script>
