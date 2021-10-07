@@ -61,8 +61,8 @@ export default {
        params: {
          api_key: '93138e86c1b2f8ca76e512cc0d72943b',
          //al posto del titolo specifico inserisco pippo
-         query:   pippo,
-         language:'it-IT',
+         query: pippo,
+         language: 'it-IT',
       }
     })
 // utilizzare sempre arrow function in funzione di callback

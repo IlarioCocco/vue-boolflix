@@ -3,7 +3,7 @@
 <!-- utilizzo dei componeni -->
     <ul class="cardList">
         <li v-for="(movie, index) in movies" :key="index">
-            <Card details="movie"/>
+            <Card :details="movie"/>
         </li>
     </ul>
   </div>
