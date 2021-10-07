@@ -36,7 +36,7 @@ export default {
 <style scoped lang="scss">
 
 .cardList {
-    // list-style: none;
+    list-style: none;
 }
 
 </style>
