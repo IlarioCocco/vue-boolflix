@@ -9,7 +9,7 @@
     con il nome dell'evento ovvero (searchMovies) in modo da richiamre un metodo quando 
     voene richiamato -->
     <Header @listen="searchMovies"/>
-    <Movies/>
+    <Movies :movies="movies"/>
   </div>
 </template>
 
@@ -40,6 +40,16 @@ export default {
   //   });
   // },
 
+
+  // data
+  // inizialmente mi creerò una variabile in data di nome movies che inizialmente 
+  // sarà un array vuoto, poi tramite la PROPS passerò i film
+  data() {
+    return {
+      movies: [],
+    }
+  },
+
   methods: {
     // pippo è un argomento che viene utilizzato da vue.js in automatico,
     // vue.js dice: nel metodo del genitore aggiungi un parametro,
@@ -52,11 +62,14 @@ export default {
          api_key: '93138e86c1b2f8ca76e512cc0d72943b',
          //al posto del titolo specifico inserisco pippo
          query:   pippo,
-         language:'en-US',
+         language:'it-IT',
       }
     })
-    .then(function (response) {
-      console.log(response.data);
+// utilizzare sempre arrow function in funzione di callback
+// cosi da lavorare dentro vue.js
+    .then((response) => {
+      // console.log(response.data);
+      this.movies = response.data.results;
     });
     }
   }
@@ -73,7 +86,7 @@ export default {
 <style lang="scss">
 #app {
  
-  text-align: center;
+  // text-align: center;
   
 }
 </style>
