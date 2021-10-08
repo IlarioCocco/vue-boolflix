@@ -18,7 +18,7 @@ import Card from './Card.vue';
 // registrazione dei componenti
 export default {
   name: 'Movies',
-// il nome della props di Movies.vue deve dialogare 
+// il valore della props di Movies.vue, ovvero movies, deve dialogare 
 // con la props di App.vue :movies presente in App.vue genitore
   props: ['movies'],
 

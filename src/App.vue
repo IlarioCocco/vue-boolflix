@@ -9,6 +9,7 @@
     con il nome dell'evento ovvero (searchMovies) in modo da richiamre un metodo quando 
     voene richiamato -->
     <Header @listen="searchMovies"/>
+    <!-- props movies di App.vue genitore -->
     <Movies :movies="movies"/>
   </div>
 </template>
