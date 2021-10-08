@@ -22,6 +22,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
+ .cardMovies {
+   align-items: center;
+   display: flex;
+ }
     
 
 </style>

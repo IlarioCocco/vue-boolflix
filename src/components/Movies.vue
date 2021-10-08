@@ -39,4 +39,8 @@ export default {
     list-style: none;
 }
 
+li {
+    padding-right:10px;
+}
+
 </style>
