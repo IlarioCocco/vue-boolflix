@@ -1,9 +1,9 @@
 <template>
   <div class="cardMovies">
       <h2>{{details.title}}</h2>
-      <h4>{{details.original_title}}</h4>
-      <div>{{details.original_language}}</div>
-      <div>{{details.vote_average}}</div>
+      <h2>{{details.original_title}}</h2>
+      <h3>{{details.original_language}}</h3>
+      <h3>{{details.vote_average}}</h3>
   </div>
 </template>
 
@@ -19,14 +19,20 @@ export default {
 
 
 
+<style  lang="scss">
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-
-//  .cardMovies {
-//    align-items: center;
-//    display: flex;
-//  }
-    
+ .cardMovies {
+    width: calc(100% / 6 - 20px);
+    margin: 10px 10px 10px 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    margin: 10px;
+    font-size: 10px;
+    // border: 1px solid rgb(255, 0, 0);
+ }
 
 </style>

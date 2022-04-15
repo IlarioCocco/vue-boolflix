@@ -1,13 +1,15 @@
 <template>
-  <div class="header">
-      <!-- searchMovies è methods
-      <input type="text" v-model="searchMovies" placeholder="search Movies">
-      <button @click="$emit('listen', searchMovies)">Search</button> -->
-    <form>
-      <input type="text" v-model="searchMovies" placeholder="search Movies">
-      <button type="submit" @click.prevent="$emit('listen', searchMovies)">Search</button>
-    </form>
-  </div>
+    <header>
+      <div class="boxUno">
+        <div>
+          <img class="logoNetflix" src="../assets/img/netflixLogoTipo.png" alt="logo netflix">
+        </div>
+        <form >
+          <input class="input" type="text" v-model="searchMovies" placeholder="search Movies">
+          <button type="submit" @click.prevent="$emit('listen', searchMovies)">Search</button>
+        </form>
+      </div>
+    </header>
 </template>
 
 
@@ -28,10 +30,51 @@ export default {
 
 
 
-
-
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+header {
+  position: fixed;
+  width: 100%;
+  margin: auto;
+  z-index: 1;
+}
+
+
+.boxUno {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: auto;
+  background-color: rgba(255, 0, 0, 0);
+  padding: 10px 70px 10px 70px;
+  // border: 5px solid rgb(255, 255, 255);
+}
+
+.logoNetflix {
+  width: 30%;
+}
+
+form {
+  display: flex;
+  // text-align: center;
+
+  .input {
+    padding: 20px;
+    border: none;
+    display: flex;
+    text-align: center;
+    border-right: 1px solid rgb(28, 28, 28);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  button {
+    background-color: red;
+    border: none;
+    padding: 10px 30px 10px 30px;
+    color: white;
+  }
+}
+
 
 </style>
