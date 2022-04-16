@@ -4,7 +4,7 @@
       <h2 class="title">{{info.title}}</h2>
       <h2 class="titleOriginal">{{info.original_title}}</h2>
       <h3 class="language">language: {{info.original_language}}</h3>
-      <h3 class="vote">vote: {{info.vote_average}}</h3>
+      <h3 class="vote"><span class="colorVote">vote:</span> {{info.vote_average}}</h3>
   </div>
 </template>
 
@@ -31,7 +31,7 @@ export default {
     // align-items: center;
     justify-content: center;
     color: white;
-    background-color: rgba(0, 0, 0, 0.762);
+    background-color: rgba(0, 0, 0, 0.689);
     margin: 10px;
     font-size: 10px;
     // border: 1px solid rgb(255, 0, 0);
@@ -71,8 +71,12 @@ export default {
 }
 
 .vote {
-  color: red;
+  color: gold;
   padding: 10px 15px 20px 15px;
+  font-weight: bold;
+  .colorVote {
+    color: rgb(255, 0, 0);
+  }
 }
 
 </style>

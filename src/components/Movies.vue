@@ -39,7 +39,7 @@ export default {
   max-height: 100%;
   margin: auto;
   padding: 100px;
-  background: linear-gradient(#000000, #00000043, #000000);
+  background: linear-gradient(#000000, #0000007a, #000000);
   height: 100vh;
   color: white;
   // border: 5px solid greenyellow;
@@ -58,13 +58,13 @@ main {
 }
 
 .boxDue {
-  max-width: 90%;
+  max-width: 100%;
   margin: auto;
   flex-wrap: wrap;
   display: flex;
   background: linear-gradient(#ffffff00, #76000000, #ff000000);
-  margin-top: 20px;
-  margin-bottom: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   height: 50vh;
   overflow: auto;
   // border: 5px solid rgb(255, 0, 0);
@@ -75,11 +75,14 @@ main {
 ::-webkit-scrollbar{
   width:0.8em;
   height:0.8em;
-  background: #ff00003d;
+  background: #ff000000;
   margin-right: 10px;
+  border-top: 12px solid red;
+  border-bottom: 12px solid red;
 }
 ::-webkit-scrollbar:hover{
   background-color:#ff0000 ;
+  border: 0.5px solid rgb(2, 2, 2);
   border: none;
   display: block;
 }
@@ -90,16 +93,17 @@ main {
   margin: auto;
   display: inline-flexbox;
   justify-content: center;
-  margin-top: 65px;
+  margin-top: 10px;
   // text-transform: uppercase;
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
   // border: 5px solid rgb(255, 0, 128);
 }
 
 .guarda {
- padding-top: 20px;
- font-weight: 100;
+ padding-top: 10px;
+ font-weight: 500;
+ color: rgb(255, 255, 255);
 }
 
 </style>
