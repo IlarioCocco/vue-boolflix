@@ -74,11 +74,15 @@ form {
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
   }
+  ::placeholder {
+    color: rgba(255, 0, 0, 0.445);
+  }
 
   input:focus{
     outline:none;
     color: rgb(255, 255, 255);
-    background-color: rgba(255, 0, 0, 0.144);
+    background-color: rgba(48, 8, 8, 0.692);
+    text-transform: uppercase;
   }
 
   button {

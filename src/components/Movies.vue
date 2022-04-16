@@ -65,7 +65,7 @@ main {
   background: linear-gradient(#ffffff00, #76000000, #ff000000);
   margin-top: 10px;
   margin-bottom: 10px;
-  height: 50vh;
+  height: 55vh;
   overflow: auto;
   // border: 5px solid rgb(255, 0, 0);
   // border: 20px solid rgb(0, 0, 0);

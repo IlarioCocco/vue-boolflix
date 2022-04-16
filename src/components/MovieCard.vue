@@ -34,7 +34,7 @@ export default {
     background-color: rgba(0, 0, 0, 0.689);
     margin: 10px;
     font-size: 10px;
-    // border: 1px solid rgb(255, 0, 0);
+    border: 1px solid rgba(255, 255, 255, 0.208);
     border-radius: 5px;
  }
 
@@ -45,10 +45,11 @@ export default {
     // position: relative;
     border: 3px solid rgba(255, 255, 255, 0);
     clip-path: inset(0% 0% 0% 0%);
+    filter: brightness(80%);
 
     &.img:hover {
-        filter: brightness(70%);
-        border: 3px solid rgb(255, 0, 0);
+        filter: brightness(100%);
+        border: 3px solid rgb(255, 255, 255);
     }
 }
 .title {
