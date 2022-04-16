@@ -23,7 +23,7 @@ export default {
 
 footer {
     background-color: black;
-    border-top: 8px solid rgb(42, 42, 42);
+    border-top: 7px solid rgb(42, 42, 42);
 }
 
 .boxFooter {

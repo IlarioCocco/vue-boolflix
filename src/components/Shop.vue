@@ -2,12 +2,12 @@
   <footer>
       <section class="boxFooter">
             <div class="shop">
-                <h2>
+                <h3>
                     Goditi Netflix sulla tua TV.
                      <p class="guarda">
                         Guarda Netflix su smart TV, Playstation, Xbox, Chromecast, Apple TV, lettori Blu-ray e molti altri dispositivi.
                      </p>
-                </h2>     
+                </h3>     
             </div>
             <div>
                 <div class="our-story-card-img-container">
@@ -38,14 +38,14 @@ export default {
 
 footer {
     background-color: black;
-    border-top: 8px solid rgb(42, 42, 42);
-    padding: 40px;
+    border-top: 7px solid rgb(42, 42, 42);
+    padding: 0px 0px 30px 0px;
     display: flex;
 }
 
 
 .boxFooter {
-    width: 80%;
+    width: 60%;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -58,32 +58,35 @@ footer {
 }
 
 .our-story-card-img {
-    width: 100%;
+    width: 80%;
+    z-index: 1;
+    position: relative;
 }
-
 
 .our-story-card-img-container{
     position: relative;
-    max-width: 100%;
+    width: 100%;
+    
 }
+
 .our-story-card-video {
     position: absolute;
-    top: 102px;
-    left: 86px;
-    max-width: 72.3%;
+    top: 73px;
+    left: 61.2px;
+    max-width: 58.2%;
+    
 }
 
 .shop {
     display: flex;
     align-items: center ;
-    padding: 0px  50px  0px  0px;
-    width: 45%;
-    
+    padding: 0px  55px  0px  0px;
+    width: 55%;
 }
 
 .guarda {
     font-size: 25px;
     padding-top: 25px;
-    font-weight: 300;
+    font-weight: 400;
 }
 </style>
