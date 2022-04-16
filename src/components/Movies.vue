@@ -39,7 +39,7 @@ export default {
   max-height: 100%;
   margin: auto;
   padding: 100px;
-  background: linear-gradient(#000000, #0000007a, #000000);
+  background: linear-gradient(#000000, #0000005f, #000000);
   height: 100vh;
   color: white;
   // border: 5px solid greenyellow;
@@ -86,7 +86,6 @@ main {
   border: none;
   display: block;
 }
-
 
 .titolo {
   max-width: 90%;

@@ -72,9 +72,10 @@ export default {
 }
 
 .vote {
-  color: gold;
-  padding: 10px 15px 20px 15px;
+  color: rgb(219, 168, 0);
+  padding: 10px 15px 15px 15px;
   font-weight: bold;
+
   .colorVote {
     color: rgb(255, 0, 0);
   }
