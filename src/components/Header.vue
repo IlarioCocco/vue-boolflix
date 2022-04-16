@@ -5,8 +5,15 @@
           <img class="logoNetflix" src="../assets/img/netflixLogoTipo.png" alt="logo netflix">
         </div>
         <form >
-          <input class="input" type="text" v-model="searchMovies" placeholder="search Movies">
-          <button type="submit" @click.prevent="$emit('listen', searchMovies)">Search</button>
+
+          <input class="input" type="text" placeholder="Search Movies"
+          v-model="searchMovies">
+
+          <button type="submit" 
+            @click.prevent="$emit('listen', searchMovies)">
+            Inizia <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
         </form>
       </div>
     </header>
@@ -66,6 +73,12 @@ form {
     border-right: 1px solid rgb(28, 28, 28);
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
+  }
+
+  input:focus{
+    outline:none;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 0, 0, 0.144);
   }
 
   button {

@@ -1,29 +1,31 @@
 <template>
     <main :style="`background-image: url(${bgImage})`">
-      <div class="boxMainShadow">
-        <div class="titolo">
-          <h2>Film, serie TV e tanto altro. <br> Senza limiti. </h2>
-          <h6>Guarda ciò che vuoi ovunque. Disdici quando vuoi.</h6>
+        <div class="boxMainShadow">
+            <div class="titolo">
+              <h2>Film, serie TV e tanto altro. <br> Senza limiti. </h2>
+              <h6 class="guarda">Guarda ciò che vuoi ovunque. Disdici quando vuoi.</h6>
+            </div>
+          
+            <div class="boxDue">
+              <MovieCard v-for="(todo, i) in arrayMovies" :key="i" 
+              :info="todo"/>
+            </div>
         </div>
-        
-          <div class="boxDue">
-            <Card v-for="(movie, i) in movies" :key="i" :details="movie"/>
-          </div>
-      </div>
     </main>
 </template>
 
 
 
+
 <script>
-import Card from './Card.vue';
+import MovieCard from './MovieCard.vue';
 export default {
   name: 'Movies',
-  props: ['movies', 'bgImage' ],
+  props: ['arrayMovies','bgImage'],
   
 
   components: {
-      Card
+    MovieCard
   }
 }
 </script>
@@ -37,7 +39,7 @@ export default {
   max-height: 100%;
   margin: auto;
   padding: 100px;
-  background: linear-gradient(#000000, #0000006f, #000000);
+  background: linear-gradient(#000000, #00000043, #000000);
   height: 100vh;
   color: white;
   // border: 5px solid greenyellow;
@@ -60,12 +62,12 @@ main {
   margin: auto;
   flex-wrap: wrap;
   display: flex;
-  background: radial-gradient(#ffffff2d, #ffffff00, #ff000000);
+  background: linear-gradient(#ffffff00, #76000000, #ff000000);
   margin-top: 20px;
   margin-bottom: 50px;
-  // border: 5px solid rgb(255, 0, 0);
   height: 50vh;
   overflow: auto;
+  // border: 5px solid rgb(255, 0, 0);
   // border: 20px solid rgb(0, 0, 0);
 
 }
@@ -73,9 +75,15 @@ main {
 ::-webkit-scrollbar{
   width:0.8em;
   height:0.8em;
-  background: #ff0000;
+  background: #ff00003d;
   margin-right: 10px;
 }
+::-webkit-scrollbar:hover{
+  background-color:#ff0000 ;
+  border: none;
+  display: block;
+}
+
 
 .titolo {
   max-width: 90%;
@@ -84,9 +92,14 @@ main {
   justify-content: center;
   margin-top: 65px;
   // text-transform: uppercase;
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
   // border: 5px solid rgb(255, 0, 128);
+}
+
+.guarda {
+ padding-top: 20px;
+ font-weight: 100;
 }
 
 </style>
