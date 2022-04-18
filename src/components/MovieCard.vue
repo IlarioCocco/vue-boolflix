@@ -1,9 +1,11 @@
 <template>
   <div class="cardMovies">
-      <img class="img" :src="`https://image.tmdb.org/t/p/w342${info.poster_path}`">
+      <img class="img" :src="`https://image.tmdb.org/t/p/w300${info.poster_path}`">
       <h2 class="title">{{info.title}}</h2>
       <h2 class="titleOriginal">{{info.original_title}}</h2>
-      <h3 class="language">language: {{info.original_language}}</h3>
+      <h3 class="language">language:
+        <lang-flag class="flag" :iso="info.original_language" :squared="false"/>
+      </h3>
       <h3 class="vote"><span class="colorVote">vote:</span> {{info.vote_average}}</h3>
   </div>
 </template>
@@ -12,9 +14,13 @@
 
 
 <script>
+import LangFlag from 'vue-lang-code-flags';
 export default {
   name: 'MovieCard',
-  props: ['info']
+  props: ['info'],
+  components: {
+    LangFlag,
+  }
 }
 </script>
 
@@ -28,7 +34,7 @@ export default {
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
-    // align-items: center;
+    align-items: center;
     justify-content: center;
     color: white;
     background-color: rgba(0, 0, 0, 0.689);
@@ -69,16 +75,22 @@ export default {
 .language {
   margin-right: 5px;
   padding: 10px 15px 0px 15px;
+  display: flex;
+  align-items: center;
 }
 
 .vote {
   color: rgb(219, 168, 0);
-  padding: 10px 15px 15px 15px;
+  padding: 10px 15px 0px 15px;
   font-weight: bold;
 
   .colorVote {
     color: rgb(255, 0, 0);
   }
+}
+.flag {
+  padding-left: 40px;
+  font-size: 20px;
 }
 
 </style>
