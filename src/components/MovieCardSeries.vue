@@ -1,8 +1,8 @@
 <template>
   <div class="cardMovies">
       <img class="img" :src="`https://image.tmdb.org/t/p/w300${info.poster_path}`">
-      <h2 class="title">{{info.title}}</h2>
-      <h2 class="titleOriginal">{{info.original_title}}</h2>
+      <h2 class="title">{{info.name}}</h2>
+      <h2 class="titleOriginal">{{info.original_name}}</h2>
       <h3 class="language">language:
         <lang-flag class="flag" :iso="info.original_language" :squared="false"/>
       </h3>
@@ -16,7 +16,7 @@
 <script>
 import LangFlag from 'vue-lang-code-flags';
 export default {
-  name: 'MovieCard',
+  name: 'MovieCardSeries',
   props: ['info'],
   components: {
     LangFlag,
@@ -37,7 +37,7 @@ export default {
     align-items: center;
     justify-content: center;
     color: white;
-    background-color: rgba(0, 0, 0, 0.689);
+    background-color: rgba(156, 36, 36, 0.525);
     margin: 10px;
     font-size: 10px;
     border: 1px solid rgba(255, 255, 255, 0.208);
@@ -67,7 +67,7 @@ export default {
 .titleOriginal {
   font-size: 15px;
   padding: 10px 15px 0px 15px;
-  color: red;
+  color: rgb(250, 175, 0);
   width: 100%;
   text-align: center;
 }

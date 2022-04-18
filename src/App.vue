@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Header @listen="searchMovies"/>
-    <Movies :arrayMovies="array" :bgImage="require('./assets/img/bkg.jpg')"/>
+    <Movies :arrayMovies="arrayMov" 
+            :arraySeries="arrayTv"
+    :bgImage="require('./assets/img/bkg.jpg')"/>
     <Shop/>
     <Footer/>
   </div>
@@ -26,7 +28,8 @@ export default {
 
   data() {
     return {
-      array: [],
+      arrayMov: [],
+      arrayTv: []
     }
   },
 
@@ -35,7 +38,7 @@ export default {
       // console.log(query);
       axios.get('https://api.themoviedb.org/3/search/movie', {
        params: {
-         api_key: '93138e86c1b2f8ca76e512cc0d72943b',
+        api_key: '93138e86c1b2f8ca76e512cc0d72943b',
          query: richiesta,
          language: 'it-IT',
       }
@@ -43,8 +46,23 @@ export default {
 
     .then((response) => {
       console.log(response.data);
-      this.array = response.data.results;
+      this.arrayMov = response.data.results;
     });
+
+// call serie tv  
+      axios.get('https://api.themoviedb.org/3/search/tv', {
+       params: {
+         api_key: 'e99307154c6dfb0b4750f6603256716d',
+         query: richiesta,
+         language: 'it-IT',
+      }
+    })
+
+    .then((response) => {
+      console.log(response.data);
+      this.arrayTv = response.data.results;
+    });
+
     }
   }
 }

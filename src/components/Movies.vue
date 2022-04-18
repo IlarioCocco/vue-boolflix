@@ -9,6 +9,9 @@
             <div class="boxDue">
               <MovieCard v-for="(todo, i) in arrayMovies" :key="i" 
               :info="todo"/>
+
+              <MovieCardSeries v-for="(todo, i) in arraySeries" :key="i" 
+              :info="todo"/>
             </div>
         </div>
     </main>
@@ -19,13 +22,15 @@
 
 <script>
 import MovieCard from './MovieCard.vue';
+import MovieCardSeries from './MovieCardSeries.vue';
 export default {
   name: 'Movies',
-  props: ['arrayMovies','bgImage'],
+  props: ['arrayMovies', 'arraySeries', 'bgImage'],
   
 
   components: {
-    MovieCard
+    MovieCard,
+    MovieCardSeries
   }
 }
 </script>
