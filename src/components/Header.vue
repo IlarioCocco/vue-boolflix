@@ -5,11 +5,11 @@
           <img class="logoNetflix" src="../assets/img/netflixLogoTipo.png" alt="logo netflix">
         </div>
         <form>
-          <form class="formReset">
-            <button  @click.prevent="reset" class="reset">
+          <!-- <form class="formReset"> -->
+            <button class="reset">
               <i class="fa-solid fa-xmark"></i>
             </button>
-          </form>
+          <!-- </form> -->
           <input class="input" type="text" placeholder="Search Movies"
             v-model="searchMovies">
           <button type="submit" 
@@ -33,12 +33,12 @@ export default {
       }
   }, 
 
-    methods: {
-        reset() {
-            this.searchMovies = "";
-            this.$emit('listen', "");
-        }
-    }
+  methods: {
+      reset() {
+          this.searchMovies = "";
+          this.$emit('listen', "");
+      }
+  }
 
  
 }

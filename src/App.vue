@@ -35,29 +35,27 @@ export default {
 
   methods: {
     searchMovies(richiesta) {
-      // console.log(query);
-      axios.get('https://api.themoviedb.org/3/search/movie', {
-       params: {
-        api_key: '93138e86c1b2f8ca76e512cc0d72943b',
-         query: richiesta,
-         language: 'it-IT',
-      }
-    })
+      const params = {
+        api_key: 'e99307154c6dfb0b4750f6603256716d',
+        query: richiesta,
+        language: 'it-IT',
 
+      }
+      // console.log(query);
+//-----------------call movies
+      axios.get('https://api.themoviedb.org/3/search/movie', {
+        params: params
+    })
     .then((response) => {
       console.log(response.data);
       this.arrayMov = response.data.results;
     });
 
-// call serie tv  
-      axios.get('https://api.themoviedb.org/3/search/tv', {
-       params: {
-         api_key: 'e99307154c6dfb0b4750f6603256716d',
-         query: richiesta,
-         language: 'it-IT',
-      }
-    })
 
+//---------------call serie tv  
+      axios.get('https://api.themoviedb.org/3/search/tv', {
+        params: params
+    })
     .then((response) => {
       console.log(response.data);
       this.arrayTv = response.data.results;

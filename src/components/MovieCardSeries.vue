@@ -1,13 +1,19 @@
 <template>
   <div class="cardMovies">
-      <img class="img" v-if="poster_path = null">
-      <img class="img" v-else :src="`https://image.tmdb.org/t/p/w300${info.poster_path}`" alt="">
+      <img class="img" v-if="info.poster_path" :src="`https://image.tmdb.org/t/p/w300${info.poster_path}`" alt="">
       <h2 class="title">{{info.name}}</h2>
       <h2 class="titleOriginal">{{info.original_name}}</h2>
       <h3 class="language">language:
         <lang-flag class="flag" :iso="info.original_language" :squared="false"/>
       </h3>
       <h3 class="vote"><span class="colorVote">vote:</span> {{info.vote_average}}</h3>
+       <div class="rating">
+        <i class="rating__star far fa-star"></i>
+        <i class="rating__star far fa-star"></i>
+        <i class="rating__star far fa-star"></i>
+        <i class="rating__star far fa-star"></i>
+        <i class="rating__star far fa-star"></i>
+      </div>
   </div>
 </template>
 
@@ -28,6 +34,13 @@ export default {
 
 
 <style scoped lang="scss">
+.rating {
+  width: 60px;
+}
+.rating__star {
+  cursor: pointer;
+  color: #ffffffb2;
+}
 
  .cardMovies {
     width: calc(100% / 6 - 20px);
@@ -50,13 +63,13 @@ export default {
     padding: 0px 0px 0px 0px; 
     cursor: pointer;
     // position: relative;
-    border: 3px solid rgba(255, 255, 255, 0);
+    border: 5px solid rgba(255, 255, 255, 0);
     clip-path: inset(0% 0% 0% 0%);
     filter: brightness(80%);
 
     &.img:hover {
-        filter: brightness(100%);
-        border: 3px solid rgb(255, 0, 0);
+        filter: brightness(110%);
+        border: 5px solid rgb(255, 0, 0);
     }
 }
 .title {
