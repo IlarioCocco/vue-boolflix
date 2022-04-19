@@ -92,4 +92,5 @@ export default {
   padding-left: 40px;
   font-size: 20px;
 }
+
 </style>

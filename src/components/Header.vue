@@ -5,21 +5,17 @@
           <img class="logoNetflix" src="../assets/img/netflixLogoTipo.png" alt="logo netflix">
         </div>
         <form>
-          
-          <select class="select" name="category" id="category">
-            <option value="all">All</option>
-            <option value="Movies">Movies</option>
-            <option value="Films">Films</option>
-          </select>
-
+          <form class="formReset">
+            <button class="reset">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </form>
           <input class="input" type="text" placeholder="Search Movies"
-          v-model="searchMovies">
-
+            v-model="searchMovies">
           <button type="submit" 
             @click.prevent="$emit('listen', searchMovies)">
-            Inizia <i class="fa-solid fa-chevron-right"></i>
+            Inizia<i class="fa-solid fa-chevron-right"></i>
           </button>
-
         </form>
       </div>
     </header>
@@ -51,7 +47,6 @@ header {
   z-index: 1;
 }
 
-
 .boxUno {
   display: flex;
   justify-content: space-between;
@@ -72,6 +67,23 @@ form {
   // text-align: center;
   font-size: 15px;
 
+  .reset {
+    border-radius: 3px;
+    border: 0.5px solid white;
+    // margin-right: 10px;
+    color: rgb(83, 83, 83);
+    background-color: rgba(0, 0, 0, 0.692);
+    padding: 10px 30px 10px 30px;
+    font-size: 20px;
+    &.reset:hover {
+      background-color: rgb(255, 0, 0);
+      font-weight: bold;
+      cursor: pointer;
+      color: rgb(255, 255, 255);
+      border: none;
+    }
+  }
+
   .input {
     padding: 20px;
     border: none;
@@ -81,6 +93,7 @@ form {
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     font-size: 15px;
+    cursor: pointer;
   }
   ::placeholder {
     color: rgba(255, 0, 0, 0.445);
@@ -112,6 +125,7 @@ form {
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     font-size: 15px;
+    cursor: pointer;
 
     .fa-chevron-right {
       padding-left: 15px;
@@ -119,5 +133,8 @@ form {
   }
 }
 
+.formReset {
+  margin-right: 15px;
+}
 
 </style>
