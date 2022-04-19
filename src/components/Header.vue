@@ -6,7 +6,7 @@
         </div>
         <form>
           <form class="formReset">
-            <button class="reset">
+            <button  @click.prevent="reset" class="reset">
               <i class="fa-solid fa-xmark"></i>
             </button>
           </form>
@@ -31,7 +31,15 @@ export default {
       return {
         searchMovies: ""
       }
-  }
+  }, 
+
+    methods: {
+        reset() {
+            this.searchMovies = "";
+            this.$emit('listen', "");
+        }
+    }
+
  
 }
 </script>
@@ -96,7 +104,7 @@ form {
     cursor: pointer;
   }
   ::placeholder {
-    color: rgba(255, 0, 0, 0.445);
+    color: rgba(104, 104, 104, 0.61);
   }
 
   .select {

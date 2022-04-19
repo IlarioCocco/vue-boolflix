@@ -1,6 +1,7 @@
 <template>
   <div class="cardMovies">
-      <img class="img" :src="`https://image.tmdb.org/t/p/w300${info.poster_path}`">
+      <img class="img" v-if="poster_path = null">
+      <img class="img" v-else :src="`https://image.tmdb.org/t/p/w300${info.poster_path}`" alt="">
       <h2 class="title">{{info.name}}</h2>
       <h2 class="titleOriginal">{{info.original_name}}</h2>
       <h3 class="language">language:
@@ -55,7 +56,7 @@ export default {
 
     &.img:hover {
         filter: brightness(100%);
-        border: 3px solid rgb(255, 255, 255);
+        border: 3px solid rgb(255, 0, 0);
     }
 }
 .title {
